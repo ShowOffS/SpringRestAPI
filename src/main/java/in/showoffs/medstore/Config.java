@@ -18,18 +18,30 @@ public class Config {
 	
 	
 	@Bean
-    public DataSource dataSource() throws URISyntaxException {
-        URI dbUri = new URI(System.getenv("DATABASE_URL"));
+    public DataSource dataSource()  {    
 
-        String username = dbUri.getUserInfo().split(":")[0];
-        String password = dbUri.getUserInfo().split(":")[1];
-        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
+        URI dbUri;
+        try {
+            String username = "username";
+            String password = "password";
+            String url = "jdbc:postgresql://localhost/dbname";
+            String dbProperty = System.getProperty("database.url");
+            if(dbProperty != null) {
+                dbUri = new URI(dbProperty);
 
-        BasicDataSource basicDataSource = new BasicDataSource();
-        basicDataSource.setUrl(dbUrl);
-        basicDataSource.setUsername(username);
-        basicDataSource.setPassword(password);
+                username = dbUri.getUserInfo().split(":")[0];
+                password = dbUri.getUserInfo().split(":")[1];
+                url = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
+            }     
 
-        return basicDataSource;
+            BasicDataSource basicDataSource = new BasicDataSource();
+            basicDataSource.setUrl(url);
+            basicDataSource.setUsername(username);
+            basicDataSource.setPassword(password);
+            return basicDataSource;
+
+        } catch (URISyntaxException e) {
+            //Deal with errors here.
+        }
     }
 }
