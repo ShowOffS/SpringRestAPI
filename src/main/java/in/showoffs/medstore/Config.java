@@ -43,5 +43,6 @@ public class Config {
         } catch (URISyntaxException e) {
             //Deal with errors here.
         }
+		return null;
     }
 }
