@@ -6,7 +6,10 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-public interface UserReop extends JpaRepository<Users, Long> {
-	List<Users> findByFirstNameLike(@Param("userName") String userName);
+
+@RepositoryRestResource(collectionResourceRel = "users", path = "users")
+public interface UserReop extends JpaRepository<Users, Integer> {
+	List<Users> findByUserNameLike(@Param("userName") String userName);
 }
