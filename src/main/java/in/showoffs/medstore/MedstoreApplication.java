@@ -13,6 +13,13 @@ import org.springframework.context.annotation.Configuration;
 public class MedstoreApplication {
 
     public static void main(String[] args) {
+        //To bind with port number on heroku
+        String webPort = System.getenv("PORT");
+        if (webPort == null || webPort.isEmpty()) {
+            webPort = "8080";
+        }
+        System.setProperty("server.port", webPort);
+        
         SpringApplication.run(MedstoreApplication.class, args);
     }
   
