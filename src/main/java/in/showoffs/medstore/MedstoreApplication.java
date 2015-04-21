@@ -36,7 +36,7 @@ public class MedstoreApplication {
         
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
          
-        //dataSource.setDriverClassName(env.getRequiredProperty(PROPERTY_NAME_DATABASE_DRIVER));
+        dataSource.setDriverClassName("org.postgresql.Driver");
         dataSource.setUrl(dbUrl);
         dataSource.setUsername(username);
         dataSource.setPassword(password);
