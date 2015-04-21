@@ -17,7 +17,7 @@ public class RequestPath {
 	
 	@RequestMapping("/")
 	  public String hello() {
-	    return "Hello World!\n" + System.getenv("DATABASE_URL");
+	    return "Hello World!\n";
 	  }
 	
 	@RequestMapping("/santa")
