@@ -1,6 +1,6 @@
-package in.showoffs.medstore.repo;
+package in.showoffs.medstore.repo.user;
 
-import in.showoffs.medstore.domain.Users;
+import in.showoffs.medstore.domain.user.Users;
 
 import java.util.List;
 
@@ -14,6 +14,8 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 public interface UserReop extends JpaRepository<Users, Integer>, UserRepoExtension {
 	List<Users> findByUserNameLike(@Param("userName") String userName);
 	
-	@Query("Select s from Users s where s.userName=:userName")
-	List<Users> tellMe(@Param("userName") String userName);
+	List<Users> findByFirstName(@Param("firstName") String firstName);
+	
+	@Query("Select s from Users s")
+	List<Users> tellMe(String g);
 }

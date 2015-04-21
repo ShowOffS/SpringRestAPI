@@ -1,9 +1,8 @@
-package in.showoffs.medstore.repo.implementer;
+package in.showoffs.medstore.repo.user;
 
 import java.util.List;
 
-import in.showoffs.medstore.domain.Users;
-import in.showoffs.medstore.repo.UserRepoExtension;
+import in.showoffs.medstore.domain.user.Users;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

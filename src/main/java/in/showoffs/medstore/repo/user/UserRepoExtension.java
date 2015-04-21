@@ -1,6 +1,6 @@
-package in.showoffs.medstore.repo;
+package in.showoffs.medstore.repo.user;
 
-import in.showoffs.medstore.domain.Users;
+import in.showoffs.medstore.domain.user.Users;
 
 import java.util.List;
 

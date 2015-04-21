@@ -2,8 +2,8 @@ package in.showoffs.medstore.controllers;
 
 import java.util.List;
 
-import in.showoffs.medstore.domain.Users;
-import in.showoffs.medstore.repo.UserReop;
+import in.showoffs.medstore.domain.user.Users;
+import in.showoffs.medstore.repo.user.UserReop;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
