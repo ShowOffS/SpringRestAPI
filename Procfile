@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -Ddatabase.url=$DATABASE_URL -Dspring.profiles.active=production -jar target/medistore-0.0.1-SNAPSHOT.jar
+web: java -Dspring.profiles.active=production -jar target/medistore-0.0.1-SNAPSHOT.jar
