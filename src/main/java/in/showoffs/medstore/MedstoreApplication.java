@@ -23,7 +23,7 @@ public class MedstoreApplication {
         SpringApplication.run(MedstoreApplication.class, args);
     }
     
-    @Bean
+   /* @Bean
     public BasicDataSource dataSource() throws URISyntaxException {
     	
     	URI dbUri = new URI(System.getenv("DATABASE_URL"));
@@ -32,9 +32,9 @@ public class MedstoreApplication {
         String password = dbUri.getUserInfo().split(":")[1];
         String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
         
-    	/*String username = "postgres";
+    	String username = "postgres";
     	String password = "fuckers";
-    	String dbUrl = "jdbc:postgresql://localhost:5432/medstore";*/
+    	String dbUrl = "jdbc:postgresql://localhost:5432/medstore";
     	
         BasicDataSource dataSource = new BasicDataSource();
          
@@ -44,5 +44,5 @@ public class MedstoreApplication {
         dataSource.setPassword(password);
          
         return dataSource;
-    }
+    }*/
 }
