@@ -34,4 +34,16 @@ public class RequestPath {
 	public List<Users> getAll(){
 		return (List<Users>) userRepo.findAll();
 	}
+	
+	@RequestMapping("/me")
+	List<Users> getMe(){
+		return (List<Users>)userRepo.tellMe("adiktz");
+	}
+	
+	@RequestMapping("/getmyname")
+	String getMyName(){
+		List<Users> fn = userRepo.findByUserNameLike("adiktz");
+		String name = fn.get(0).getFirstName() + " " + fn.get(0).getLastName();
+		return name;
+	}
 }
