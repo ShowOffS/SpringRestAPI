@@ -11,7 +11,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 
 @RepositoryRestResource(collectionResourceRel = "users", path = "users")
-public interface UserReop extends JpaRepository<Users, Integer> {
+public interface UserReop extends JpaRepository<Users, Integer>, UserRepoExtension {
 	List<Users> findByUserNameLike(@Param("userName") String userName);
 	
 	@Query("Select s from Users s where s.userName=:userName")

@@ -46,4 +46,9 @@ public class RequestPath {
 		String name = fn.get(0).getFirstName() + " " + fn.get(0).getLastName();
 		return name;
 	}
+	
+	@RequestMapping("/extended")
+	List<Users> ext(){
+		return userRepo.extended("adiktz");
+	}
 }
