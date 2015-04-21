@@ -1,12 +1,17 @@
 package in.showoffs.medstore.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-/*@Entity
-@Table(name = "users")*/
+@Entity
+@Table(name = "users")
 public class Users{
 	
-	/*@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)*/
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	int id;
 	
 	String userName;

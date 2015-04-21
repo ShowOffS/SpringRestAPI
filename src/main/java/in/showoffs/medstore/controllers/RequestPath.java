@@ -1,5 +1,8 @@
 package in.showoffs.medstore.controllers;
 
+import java.util.List;
+
+import in.showoffs.medstore.domain.Users;
 import in.showoffs.medstore.repo.UserReop;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +25,7 @@ public class RequestPath {
 		return "This is santa Test";
 	}
 	
-	/*@RequestMapping("/adiktz")
+	@RequestMapping("/adiktz")
 	public List<Users> getAdiktz(){
 		return (List<Users>) userRepo.findByUserNameLike("adiktz");
 	}
@@ -42,5 +45,5 @@ public class RequestPath {
 		List<Users> fn = userRepo.findByUserNameLike("adiktz");
 		String name = fn.get(0).getFirstName() + " " + fn.get(0).getLastName();
 		return name;
-	}*/
+	}
 }

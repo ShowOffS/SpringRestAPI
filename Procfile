@@ -1,1 +1,1 @@
-web: java -Dspring.profiles.active=production -jar target/medistore-0.0.1-SNAPSHOT.jar
+web: java -Dspring.profiles.active=production --port $PORT -jar target/*.jar
