@@ -1,19 +1,13 @@
 spring:
+    jpa:
+        database_platform: org.hibernate.dialect.PostgreSQLDialect
+---
+spring:
     profiles: development
     datasource:
         driverClassName: org.postgresql.Driver
         url: jdbc:postgresql://localhost:5432/medstore
         username: postgres
         password: fuckers
-    jpa:
-        database_platform: org.hibernate.dialect.PostgreSQLDialect
----
-spring:
-    profiles: production
-    datasource:
-        driverClassName: org.postgresql.Driver
-        url: jdbc:postgresql://ec2-50-17-192-136.compute-1.amazonaws.com:5432
-        username: udftiuluvkjlxo
-        password: CcgV5cMfd9urmii_QaT7xeF7D3
     jpa:
         database_platform: org.hibernate.dialect.PostgreSQLDialect
