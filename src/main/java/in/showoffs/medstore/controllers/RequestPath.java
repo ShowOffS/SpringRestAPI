@@ -27,6 +27,7 @@ public class RequestPath {
 	
 	@RequestMapping("/adiktz")
 	public List<Users> getAdiktz(){
+		
 		return (List<Users>) userRepo.findByUserNameLike("adiktz");
 	}
 	
