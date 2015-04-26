@@ -3,7 +3,6 @@ package in.showoffs.medstore.domain.user;
 import in.showoffs.medstore.domain.user.address.Address;
 import in.showoffs.medstore.domain.user.login.Login;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
